@@ -1,0 +1,75 @@
+
+<!-- Estrutura HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8">
+    <title>Agrinho 2026 - Sua Vida é Agricultura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Define a base do tailwind no site-->
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">  
+
+    <nav class="border-b border-slate-900 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span class="text-emerald-400 font-black tracking-widest text-xl">AGRI//FLOW</span>
+            <div class="flex gap-6 text-sm font-medium text-slate-400">
+                <a href="#" class="text-emerald-400 transition">Home</a>
+                <a href="#" class="hover:text-slate-200 transition">Cotidiano</a>
+                <a href="#" class="hover:text-slate-200 transition">Regiões</a>
+                <a href="#" class="hover:text-slate-200 transition">Interativo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden py-40 px-6 bg-gradient-to-b from-slate-900 to-slate-950 text-center">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_60%)]"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h1 class="text-8xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-200 to-emerald-500 uppercase mb-6">
+                SUA VIDA É AGRICULTURA
+            </h1>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto font-light tracking-wide">
+                TEMA AGRINHO 2026 - Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <section class="lg:col-span-2 bg-slate-900/40 border border-slate-900 rounded-3xl p-8 backdrop-blur-sm">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Resumo do Trabalho</h2>
+            </div>
+            <p class="text-slate-400 leading-relaxed text-lg">
+                Anote aqui o resumo do seu projeto.
+            </p>
+        </section>
+
+        <section class="space-y-6">
+            <div class="flex items-center gap-3 px-2">
+                <span class="h-2 w-2 rounded-full bg-teal-400"></span>
+                <h2 class="text-xs font-bold tracking-widest text-teal-400 uppercase">Notícias Confiáveis</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-900/40 border border-slate-900 p-6 rounded-2xl hover:border-emerald-500/30 transition">
+                    <span class="text-xs font-mono text-emerald-400">01 / CIÊNCIA</span>
+                    <h3 class="text-lg font-bold text-slate-200 mt-2 mb-1">Embrapa</h3>
+                    <p class="text-sm text-slate-400 mb-4">Informações científicas e pesquisas oficiais sobre o desenvolvimento sustentável.</p>
+                    <a href="https://www.embrapa.br" target="_blank" class="text-xs font-semibold text-emerald-400 hover:underline">Acessar Portal &rarr;</a>
+                </div>
+
+                <div class="bg-slate-900/40 border border-slate-900 p-6 rounded-2xl hover:border-emerald-500/30 transition">
+                    <span class="text-xs font-mono text-emerald-400">02 / OFICIAL</span>
+                    <h3 class="text-lg font-bold text-slate-200 mt-2 mb-1">Ministério da Agricultura</h3>
+                    <p class="text-sm text-slate-400 mb-4">Dados oficiais, estatísticas e políticas públicas do setor agropecuário.</p>
+                    <a href="https://www.gov.br/agricultura" target="_blank" class="text-xs font-semibold text-emerald-400 hover:underline">Acessar Portal &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
