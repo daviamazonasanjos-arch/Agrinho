@@ -1,7 +1,10 @@
+// Variáveis do simulador interativo (pontuação do jogo)
 let state = {
     sustentabilidade: 50,
     producao: 50
 };
+
+// Dados informativos sobre as regiões agrícolas do Brasil
 const dadosRegioes = {
     sul: "Região Sul: Destaque na produção de grãos, suinocultura e avicultura, integrando forte cooperativismo com sistemas de plantio direto na palha.",
     sudeste: "Região Sudeste: Liderança na produção de café, cana-de-açúcar e citros, empregando alta tecnologia de automação industrial e irrigação.",
@@ -10,6 +13,7 @@ const dadosRegioes = {
     nordeste: "Região Nordeste: No Nordeste, destaca-se a agricultura familiar, a fruticultura irrigada no semiárido e o agronegócio de grãos em expansão no MATOPIBA.",
 };
 
+// Função para alternar entre as abas (Tabs) do site
 function switchTab(tabId) {
     document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
@@ -22,11 +26,14 @@ function switchTab(tabId) {
     document.getElementById(`btn-${tabId}`).classList.add('active');
 }
 
+// Função para exibir as informações da região selecionada na tela
 function showRegion(regionKey) {
     const display = document.getElementById('region-display');
     display.textContent = dadosRegioes[regionKey];
 }
 
+
+// Função para processar a escolha/ação do jogador no simulador
 function runAction(actionType) {
     const feedback = document.getElementById('game-feedback');
     
@@ -40,9 +47,13 @@ function runAction(actionType) {
         feedback.textContent = "O maquinário pesado acelerou a colheita, mas aumentou as emissões.";
     }
     
+
+    // Atualiza a interface do jogo com os novos valores após a ação
     updateGameUI();
 }
 
+
+// Função para renderizar e atualizar as barras de progresso e textos do jogo
 function updateGameUI() {
     document.getElementById('val-sust').textContent = state.sustentabilidade;
     document.getElementById('val-prod').textContent = state.producao;
@@ -51,6 +62,8 @@ function updateGameUI() {
     document.getElementById('bar-prod').style.width = `${state.producao}%`;
 }
 
+
+// Função para validar a resposta selecionada pelo usuário no Quiz
 function checkQuiz() {
     const selectedOption = document.querySelector('input[name="q1"]:checked');
     const resultBox = document.getElementById('quiz-result');

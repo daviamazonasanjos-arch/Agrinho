@@ -1,9 +1,11 @@
+/* Reset/Inicializador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*Configurações globais*/
 html {
     scroll-behavior: smooth;
     background-color: #120097;
@@ -11,14 +13,16 @@ html {
     color: #ffffff;
 }
 
+/* Barra de rolagem */
 ::-webkit-scrollbar {
     width: 10px;
 }
-
+/* Fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
     background: #120097;
 }
 
+/* Indicador/Pino da barra de rolagem */
 ::-webkit-scrollbar-thumb {
     background: #102086;
     border: 2px solid #120097;
@@ -26,10 +30,12 @@ html {
     transition: background-color 0.3s ease;
 }
 
+/* Efeito hover no pino da barra de rolagem */
 ::-webkit-scrollbar-thumb:hover {
     background: #08904a;
 }
 
+/* Barra de navegação fixa (Navbar) */
 .navbar {
     background-color: rgba(14, 64, 117, 0.7);
     border-bottom: 2px solid #102086;
@@ -40,6 +46,7 @@ html {
     padding: 1.25rem 2rem;
 }
 
+/* Container do menu de navegação */
 .nav-container {
     max-width: 80rem;
     margin: 0 auto;
@@ -48,6 +55,7 @@ html {
     align-items: center;
 }
 
+/* Estilização do Logotipo */
 .logo {
     color: #00ff0d;
     font-weight: 900;
@@ -56,11 +64,13 @@ html {
     text-shadow: 0 0 10px rgba(0, 255, 13, 0.3);
 }
 
+/* Alinhamento dos links de navegação */
 .nav-links {
     display: flex;
     gap: 1rem;
 }
 
+/* Botões padrões do menu */
 .nav-btn {
     background: transparent;
     border: 1px solid transparent;
@@ -73,17 +83,20 @@ html {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Efeito hover nos botões do menu */
 .nav-btn:hover {
     color: #ffffff;
     background-color: rgba(9, 128, 82, 0.3);
 }
 
+/* Botão ativo/selecionado no menu */
 .nav-btn.active {
     color: #00ff0d;
     background-color: #0e4075;
     border-color: #098052;
 }
 
+/* Seção principal de destaque (Hero Banner) */
 .hero {
     position: relative;
     padding: 8rem 2rem;
@@ -93,12 +106,14 @@ html {
     overflow: hidden;
 }
 
+/* Efeito de brilho radial no Hero */
 .hero-glow {
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at center, rgba(3, 224, 31, 0.15) 0%, transparent 70%);
 }
 
+/* Conteúdo interno do Hero */
 .hero-content {
     position: relative;
     z-index: 10;
@@ -106,6 +121,7 @@ html {
     margin: 0 auto;
 }
 
+/* Título principal com gradiente de texto */
 .main-title {
     font-size: 4.5rem;
     font-weight: 900;
@@ -118,6 +134,7 @@ html {
     margin-bottom: 1.5rem;
 }
 
+/* Subtítulo do Hero */
 .subtitle {
     font-size: 1.25rem;
     color: #ffffff;
@@ -127,26 +144,31 @@ html {
     margin: 0 auto;
 }
 
+/* Container principal do conteúdo */
 .main-content {
     max-width: 80rem;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
 
+/* Aba de conteúdo oculta por padrão */
 .tab-content {
     display: none;
 }
 
+/* Aba de conteúdo visível (Ativa) */
 .tab-content.active {
     display: block;
 }
 
+/* Grid layout do Dashboard */
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
+/* Responsividade para telas grandes (Desktop) */
 @media (min-width: 1024px) {
     .dashboard-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -156,6 +178,7 @@ html {
     }
 }
 
+/* Estilo padrão dos cartões (Cards) */
 .card {
     background: rgba(14, 64, 117, 0.4);
     border: 1px solid #102086;
@@ -165,12 +188,14 @@ html {
     transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/* Efeito hover e elevação do Card */
 .card:hover {
     border-color: #098052;
     background-color: rgba(14, 64, 117, 0.6);
     transform: translateY(-2px);
 }
 
+/* Cabeçalho do Card */
 .card-header {
     display: flex;
     align-items: center;
@@ -178,6 +203,7 @@ html {
     margin-bottom: 1.5rem;
 }
 
+/* Título interno do Card */
 .card-header h2 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -185,46 +211,54 @@ html {
     color: #ffffff;
 }
 
+/* Ponto indicador de status (Dot) */
 .dot {
     height: 0.6rem;
     width: 0.6rem;
     border-radius: 50%;
 }
 
+/* Efeito de pulsação luminosa verde */
 .pulse-lime {
     background-color: #00ff0d;
     box-shadow: 0 0 8px #00ff0d;
     animation: pulseGlow 2s infinite;
 }
 
+/* Animação de esmaecimento para o efeito pulse */
 @keyframes pulseGlow {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
 }
 
+/* Variações de cores fixas para os pontos indicadores */
 .dot-teal { background-color: #05c030; }
 .dot-rouge { background-color: #fcc203; }
 .dot-lime { background-color: #03e01f; }
 .dot-cobalt { background-color: #102086; }
 
+/* Bloco de texto com leitura destacada */
 .rich-text {
     color: #ffffff;
     opacity: 0.9;
     line-height: 1.75;
 }
 
+/* Texto descritivo padrão do Card */
 .card-text {
     color: #ffffff;
     opacity: 0.85;
     line-height: 1.6;
 }
 
+/* Lista vertical de blocos de notícias */
 .news-list {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
+/* Item individual de notícia */
 .news-item {
     background: #102086;
     padding: 1.25rem;
@@ -233,11 +267,13 @@ html {
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/* Hover no item de notícia */
 .news-item:hover {
     border-color: #08904a;
     background-color: #0e4075;
 }
 
+/* Tag/Etiqueta identificadora da notícia */
 .news-tag {
     font-size: 0.7rem;
     font-family: monospace;
@@ -246,17 +282,20 @@ html {
     margin-bottom: 0.5rem;
 }
 
+/* Título da notícia */
 .news-item h3 {
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
 }
 
+/* Resumo da notícia */
 .news-item p {
     font-size: 0.85rem;
     opacity: 0.75;
     margin-bottom: 0.75rem;
 }
 
+/* Link "Ler mais" da notícia */
 .news-item a {
     color: #fcc203;
     text-decoration: none;
@@ -265,16 +304,19 @@ html {
     transition: color 0.3s ease;
 }
 
+/* Hover no link da notícia */
 .news-item a:hover {
     color: #00ff0d;
 }
 
+/* Área dos botões seletores de região */
 .region-controls {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
+/* Botão individual de seleção de região */
 .region-btn {
     background: #102086;
     border: 1px solid #0e4075;
@@ -286,11 +328,13 @@ html {
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Hover nos botões de região */
 .region-btn:hover {
     background-color: #098052;
     border-color: #05c030;
 }
 
+/* Caixa com informações detalhadas da região */
 .region-box {
     background: rgba(18, 0, 151, 0.6);
     border: 1px dashed #08904a;
@@ -299,6 +343,7 @@ html {
     line-height: 1.6;
 }
 
+/* Container organizador das barras de progresso/status */
 .bars-container {
     display: flex;
     flex-direction: column;
@@ -306,12 +351,14 @@ html {
     margin: 1.5rem 0;
 }
 
+/* Rótulo descritivo acima da barra */
 .bar-wrapper label {
     display: block;
     font-size: 0.85rem;
     margin-bottom: 0.5rem;
 }
 
+/* Fundo da barra de progresso */
 .bar-bg {
     background: #102086;
     height: 0.75rem;
@@ -319,20 +366,24 @@ html {
     overflow: hidden;
 }
 
+/* Preenchimento interno dinâmico da barra */
 .bar-fill {
     height: 100%;
     width: 0%;
     transition: width 0.4s ease;
 }
 
+/* Cores de preenchimento e brilho para as barras */
 .fill-green { background: #05c030; box-shadow: 0 0 8px #05c030; }
 .fill-blue { background: #0e4075; box-shadow: 0 0 8px #0e4075; }
 
+/* Alinhamento para botões de minijogos/interações */
 .game-controls {
     display: flex;
     gap: 1rem;
 }
 
+/* Botão de ação interativa principal */
 .action-btn {
     flex: 1;
     background: #098052;
@@ -345,10 +396,12 @@ html {
     transition: background-color 0.3s ease;
 }
 
+/* Hover no botão de ação interativa */
 .action-btn:hover {
     background-color: #07a041;
 }
 
+/* Texto de retorno/alerta para ações do usuário */
 .feedback-text {
     margin-top: 1rem;
     font-size: 0.85rem;
@@ -356,6 +409,7 @@ html {
     min-height: 1.25rem;
 }
 
+/* Caixa externa das opções de marcar (Radio button) */
 .radio-label {
     display: block;
     background: rgba(16, 32, 134, 0.6);
@@ -367,14 +421,17 @@ html {
     transition: background-color 0.3s ease;
 }
 
+/* Hover na opção de marcar do Quiz */
 .radio-label:hover {
     background-color: rgba(9, 128, 82, 0.4);
 }
 
+/* Espaçamento do input do tipo radio */
 .radio-label input {
     margin-right: 0.5rem;
 }
 
+/* Botão de envio de formulários/Quiz */
 .submit-btn {
     width: 100%;
     background: #08904a;
@@ -388,10 +445,12 @@ html {
     transition: background-color 0.3s ease;
 }
 
+/* Hover no botão de envio do Quiz */
 .submit-btn:hover {
     background-color: #05c030;
 }
 
+/* Caixa que exibe a pontuação final do Quiz */
 .quiz-result-box {
     margin-top: 1.5rem;
     padding: 1rem;
@@ -402,6 +461,7 @@ html {
     transition: background-color 0.3s ease;
 }
 
+/* Responsividade para dispositivos móveis (Smartphones) */
 @media (max-width: 768px) {
     .main-title {
         font-size: 2.5rem;
@@ -415,6 +475,7 @@ html {
     }
 }
 
+/* Lista vertical estruturada do guia explicativo */
 .guide-list {
     list-style: none;
     display: flex;
@@ -422,11 +483,13 @@ html {
     gap: 1.25rem;
 }
 
+/* Item individual do guia com borda lateral decorativa */
 .guide-list li {
     border-left: 2px solid #098052;
     padding-left: 1rem;
 }
 
+/* Título de destaque de cada item do guia */
 .guide-item-title {
     display: block;
     color: #fcc203;
@@ -435,9 +498,10 @@ html {
     margin-bottom: 0.25rem;
 }
 
+/* Texto descritivo/Explicativo de cada item do guia */
 .guide-item-desc {
     color: #ffffff;
     opacity: 0.85;
     font-size: 0.9rem;
     line-height: 1.5;
-}   
+}
